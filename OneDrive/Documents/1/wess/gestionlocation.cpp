@@ -25,8 +25,7 @@ QSqlQueryModel * gestionlocation ::Recherche(QString a)//cls=ASC ou DESC
 {
 QSqlQueryModel *model=new QSqlQueryModel();
 
-model->setQuery("select * from GESTIONLOCATION WHERE IDVEHICULE LIKE '%"+a+"%' OR NUMBERV LIKE '%"+a+"%' OR TYPEV LIKE '%"+a+"%' OR MATRECULEV LIKE %"+a+"%' " );
-model->setQuery("select * from GESTIONCLIENT WHERE IDCLIENT LIKE '%"+a+"%'");
+model->setQuery("select * from GESTIONLOCATION WHERE IDVEHICULE LIKE '%"+a+"%' OR NUMBERV LIKE '%"+a+"%' OR TYPEV LIKE '%"+a+"%' OR MATRECULEV LIKE '%"+a+"%' " );
 model->setHeaderData(0, Qt::Horizontal,QObject :: tr("IDVEHICULE"));
 model->setHeaderData(1, Qt::Horizontal, QObject :: tr("NOMBREV"));
 model->setHeaderData(2, Qt::Horizontal, QObject :: tr("TYPEV"));
